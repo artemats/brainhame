@@ -1,0 +1,152 @@
+@import "../components/hamburger";
+
+body {
+  .float-header {
+    //opacity: 1;
+    //transition: all 0.8s;
+    //opacity: 0;
+    display: block;
+  }
+
+  &.active-preloader {
+    .float-header {
+      //opacity: 0;
+      display: none;
+    }
+  }
+}
+
+
+.float-header {
+  opacity: 1;
+  transition: opacity 0.6s;
+
+  .nav {
+    @include respond-to(xl) {
+      position: fixed;
+      right: 5%;
+      flex-direction: column;
+      top: 150px;
+      z-index: 101;
+
+      li {
+        min-width: 110px;
+
+        &:not(:last-child) {
+          @include respond-to(xl) {
+            margin-bottom: 10px;
+          }
+
+          @include respond-to(xxl) {
+            margin-bottom: 40px;
+          }
+        }
+
+        a {
+          display: inline-block;
+          padding: 5px 0;
+
+          &:hover {
+            color: rgba(35, 35, 35, 0.6);
+          }
+        }
+      }
+    }
+
+    li {
+      @extend .nav-item;
+    }
+
+    a {
+      @extend .nav-link;
+
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: map-get($font-weight, "black");
+      letter-spacing: 0.7px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.header {
+  @include respond-to(xl) {
+    .section-inner {
+      position: relative;
+
+      &:before {
+        content: "7";
+        font-size: 12px;
+        font-weight: 900;
+
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+      }
+    }
+  }
+
+  .menu-wrapper {
+    flex: 1;
+  }
+
+  .navbar-nav {
+    @include respond-to(md) {
+      justify-content: flex-end;
+      display: flex;
+    }
+  }
+
+  .nav {
+
+    li {
+      @extend .nav-item;
+    }
+
+    a {
+      @extend .nav-link;
+
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: map-get($font-weight, "black");
+      letter-spacing: 0.7px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .brand {
+    &:before, &:after {
+      display: none;
+    }
+
+    svg {
+      width: 150px;
+
+      @include respond-to(xs) {
+        width: auto;
+        height: 12px;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 30px 0;
+
+    @include respond-to(xs) {
+      padding: 10px 0;
+    }
+  }
+
+  .navbar-collapse {
+    @include respond-to(sm) {
+      justify-content: flex-end;
+    }
+  }
+}
+

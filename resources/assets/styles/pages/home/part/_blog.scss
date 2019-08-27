@@ -1,0 +1,88 @@
+.home {
+  .blog {
+    //background-color: map-get($theme-colors, 'locust');
+    background-color: #ede9e4;
+
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .first-column {
+      @include respond-to(xs) {
+        flex-direction: column-reverse;
+        display: inline-flex;
+        margin-bottom: 20px;
+      }
+
+      @include respond-to(xxl) {
+        padding-right: 70px;
+      }
+    }
+
+    &-navigation {
+      font-family: HelveticaNeueCyr;
+      font-weight: 900;
+      font-size: 10px;
+      text-transform: uppercase;
+
+      display: flex;
+      justify-content: space-between;
+
+      @include respond-to(xs) {
+        margin-bottom: 12px;
+      }
+
+      @include respond-to(sm) {
+        margin-top: 12px;
+      }
+
+      @include respond-to(xl) {
+        display: inline-flex;
+        min-width: 200px;
+      }
+
+      .arrow {
+        cursor: pointer;
+        padding: 5px 0;
+      }
+    }
+
+    .article {
+      margin-bottom: 30px;
+
+      &-image {
+        img {
+          height: 360px;
+          object-fit: cover;
+
+          @include respond-to(xl) {
+            //height: auto;
+            //object-fit: fill;
+
+            height: 490px;
+            width: 100%;
+          }
+        }
+      }
+
+      &-title {
+        font-weight: bold;
+        font-size: 16px;
+
+        margin-bottom: 10px;
+      }
+
+      &-date {
+        font-weight: map-get($font-weight, "medium");
+        font-size: 12px;
+
+        color: map-get($theme-colors, 'greyish');
+        margin-bottom: 10px;
+      }
+
+      &-excerpt {
+        text-align: justify;
+      }
+    }
+  }
+}

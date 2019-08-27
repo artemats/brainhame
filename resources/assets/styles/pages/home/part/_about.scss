@@ -1,0 +1,52 @@
+.home {
+  .about {
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 630px;
+
+        @include respond-to(xl) {
+          align-items: flex-end;
+        }
+
+        .section-title {
+          position: relative;
+          max-width: 200px;
+
+          //transform: translateY(-35%);
+          margin-top: -6%;
+
+          @include respond-to(xl) {
+            margin-bottom: 30px;
+          }
+
+          &:after {
+            content: '-';
+            position: absolute;
+            bottom: 0;
+            right: -80px;
+
+            @include respond-to(xl) {
+              right: -110px;
+            }
+
+            @include respond-to(xs) {
+              position: relative;
+              right: 0;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-text {
+      text-align: justify;
+    }
+  }
+}

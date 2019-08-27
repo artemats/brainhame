@@ -1,0 +1,49 @@
+.about-page {
+  .clients {
+    .section-title, .section-subtitle {
+      @include respond-to(xs) {
+        font-size: 30px;
+      }
+
+      @include respond-to(md) {
+        font-size: 62px;
+      }
+
+      @include respond-to(xl) {
+
+      }
+    }
+
+    .section-title {
+      margin-bottom: 0;
+    }
+
+    .section-subtitle {
+      margin-bottom: 35px;
+    }
+    
+    .logos {
+      @include respond-to(xl) {
+        padding-top: 10px;
+      }
+
+      &-item {
+        margin-bottom: 30px;
+        
+        @include respond-to(xl) {
+            margin-bottom: 50px;
+        }
+        
+        &:nth-child(1n+5){
+            margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.template-about {
+  .header {
+    background-color: map-get($theme-colors, "wanwhite");
+  }
+}

@@ -1,0 +1,10 @@
+#wpadminbar {
+  //top: -32px;
+
+  a {
+    &:before, &:after {
+      content: none;
+      display: none;
+    }
+  }
+}

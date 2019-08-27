@@ -1,0 +1,232 @@
+.about-page {
+  .first_block {
+    .image-wrapper {
+      max-width: 90%;
+      background-color: map-get($theme-colors, "locust");
+
+      .image-slide {
+        transition: all 0.6s;
+
+        &.activate {
+          transform: translate(30px, 30px);
+        }
+      }
+    }
+
+    .second-column {
+      @include respond-to(xl) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .second_block {
+    .section-inner {
+      display: flex;
+      justify-content: flex-end;
+
+      .block-wrapper {
+        @include respond-to(xl) {
+          max-width: 70%;
+        }
+      }
+
+      .image-wrapper {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .third_block {
+    .section-inner {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+
+      position: relative;
+
+      &:before {
+        content: '10';
+        font-size: 12px;
+        font-weight: 900;
+
+        position: absolute;
+        right: 55px;
+        top: -50px;
+      }
+
+      .inner-block {
+        @include respond-to(md) {
+          padding: 0 25px;
+        }
+
+        @include respond-to(md, 'max') {
+          &:nth-child(odd) {
+            padding-right: 10px;
+          }
+
+          &:nth-child(even) {
+            padding-left: 10px;
+          }
+        }
+
+        @include respond-to(xl) {
+          padding: 0 30px;
+        }
+
+        &.block-description {
+          @include respond-to(md) {
+            flex: 0 0 35%;
+            max-width: 35%;
+
+            display: inline-flex;
+            align-items: flex-end;
+
+            padding-left: 0;
+          }
+          @include respond-to(md, 'max') {
+            flex: 0 0 60%;
+            max-width: 60%;
+
+            display: inline-flex;
+            align-items: flex-end;
+
+            font-size: 12px;
+          }
+          @include respond-to(xl) {
+            flex: 0 0 35%;
+            max-width: 35%;
+
+            display: inline-flex;
+            align-items: flex-end;
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        &.image-block {
+          &:nth-child(2) {
+            @include respond-to(md) {
+              flex: 0 0 35%;
+              max-width: 35%;
+            }
+            @include respond-to(md, 'max') {
+              flex: 0 0 40%;
+              max-width: 40%;
+            }
+            @include respond-to(xl) {
+              flex: 0 0 35%;
+              max-width: 35%;
+            }
+          }
+
+          &:nth-child(3) {
+            @include respond-to(md) {
+              flex: 0 0 30%;
+              max-width: 30%;
+
+              display: inline-flex;
+              align-items: flex-end;
+
+              padding-right: 0;
+
+              img {
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            @include respond-to(md, 'max') {
+              flex: 0 0 40%;
+              max-width: 40%;
+
+              display: inline-flex;
+              align-items: flex-end;
+
+              margin-top: 40px;
+
+              img {
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            @include respond-to(xl) {
+              flex: 0 0 30%;
+              max-width: 30%;
+
+              display: inline-flex;
+              align-items: flex-end;
+
+
+              img {
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            @include respond-to(md) {
+              margin-top: 40px;
+
+              position: relative;
+              left: -80px;
+
+              img {
+                height: 300px;
+                width: 460px;
+                object-fit: cover;
+              }
+            }
+            @include respond-to(md, 'max') {
+              flex: 0 0 60%;
+              max-width: 60%;
+
+              margin-top: 40px;
+
+              //img {
+              //  height: 300px;
+              //  width: 460px;
+              //  object-fit: cover;
+              //}
+            }
+            @include respond-to(xl) {
+              margin-top: 40px;
+              left: -30px;
+
+              img {
+                height: 300px;
+                width: 570px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+
+        .inner-block {
+          @include respond-to(xs) {
+            &:nth-child(1) {
+              order: 3;
+            }
+
+            &:nth-child(2) {
+              order: 4;
+            }
+
+            &:nth-child(3) {
+              order: 1;
+            }
+
+            &:nth-child(4) {
+              order: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+//@font-face {
+//  font-family: 'MonumentExtended';
+//  src: url('~fonts/monumentextended/monumentextended-regular-webfont.eot');
+//  src: url('~fonts/monumentextended/monumentextended-regular-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('~fonts/monumentextended/monumentextended-regular-webfont.woff2') format('woff2'),
+//  url('~fonts/monumentextended/monumentextended-regular-webfont.woff') format('woff'),
+//  url('~fonts/monumentextended/monumentextended-regular-webfont.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@font-face {
+  font-family: 'MonumentExtended';
+  src: url('~fonts/monumentextended/monumentextended-ultrabold-webfont.eot');
+  src: url('~fonts/monumentextended/monumentextended-ultrabold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('~fonts/monumentextended/monumentextended-ultrabold-webfont.woff2') format('woff2'),
+  url('~fonts/monumentextended/monumentextended-ultrabold-webfont.woff') format('woff'),
+  url('~fonts/monumentextended/monumentextended-ultrabold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.eot');
+  src: local('HelveticaNeueCyr-Roman'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Bold.eot');
+  src: local('HelveticaNeueCyr-Bold'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.eot');
+  src: local('HelveticaNeueCyr-Medium'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Black.eot');
+  src: local('HelveticaNeueCyr-Black'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Black.woff') format('woff'),
+  url('~fonts/helveticaneuecyr/HelveticaNeueCyr-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+

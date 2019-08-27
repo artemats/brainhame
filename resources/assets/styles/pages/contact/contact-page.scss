@@ -1,0 +1,74 @@
+body {
+  .contact-page {
+    padding: 0;
+
+    .section-inner {
+      background-color: map-get($theme-colors, 'vanilla');
+      padding: 0;
+    }
+
+    .page-columns {
+      &-inner {
+        padding: 50px 24px;
+
+        @include respond-to(md) {
+          padding: 50px 55px;
+        }
+
+        @include respond-to(xl) {
+          padding: 100px 50px;
+        }
+      }
+
+      &.second-column {
+        @include respond-to(xl, 'max') {
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .info {
+      font-size: 16px;
+
+      @include respond-to(xs) {
+        font-size: 12px;
+      }
+
+      &-inner {
+        @include respond-to(xs) {
+          &:first-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      &-header {
+        font-size: 14px;
+        font-weight: 900;
+      }
+    }
+
+    .form-title {
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+
+    /* body .contact-page .wcf7 .field label:after */
+    @include respond-to(xl, 'max') {
+      .wpcf7 {
+        .field {
+          label {
+            &:after {
+              background: #ffffff;
+            }
+          }
+        }
+      }
+
+      .divider {
+        background-color: #ffffff;
+      }
+    }
+  }
+}

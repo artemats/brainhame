@@ -1,0 +1,150 @@
+.home {
+  .hero {
+    background-color: map-get($theme-colors, "wanwhite");
+    position: relative;
+    min-height: calc(100vh - 122px);
+
+    @include respond-to(xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @include respond-to(xs) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+
+      min-height: calc(100vh - 68px);
+    }
+
+    .section-inner {
+      position: relative;
+
+      &:before {
+        content: '10';
+        font-size: 12px;
+        font-weight: 900;
+
+        position: absolute;
+        left: 55px;
+        top: -50px;
+      }
+
+      &:after {
+        content: '13';
+        font-size: 12px;
+        font-weight: 900;
+
+        position: absolute;
+        right: 10%;
+        bottom: 20%;
+
+        @include respond-to(xxl) {
+          right: 15%;
+        }
+      }
+
+      @include respond-to(xs) {
+        position: static;
+
+        &:before {
+          top: 40px;
+          left: 24px;
+        }
+
+        &:after {
+          top: 70px;
+          right: 25px;
+        }
+      }
+    }
+
+    &-image {
+      display: flex;
+      justify-content: flex-end;
+
+      @include respond-to(xs) {
+        align-items: baseline;
+      }
+
+      @include respond-to(xl, 'max') {
+        margin-bottom: 75px;
+      }
+
+      & {
+        @include respond-to(xl) {
+          position: absolute;
+          top: -120px;
+          right: 23%;
+          object-fit: cover;
+        }
+
+        @include respond-to(xxl) {
+          right: 27%;
+        }
+      }
+
+      &, img {
+        @include respond-to(xl) {
+          width: 400px;
+          height: 400px;
+          object-fit: cover;
+        }
+
+        @include respond-to(xxl) {
+          width: 600px;
+          height: 600px;
+        }
+      }
+    }
+
+    &-title.section-title {
+        margin-bottom: 10px;
+    }
+
+    &-subtitle {
+      @include respond-to(xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-portfolio-link {
+      transform: rotateZ(90deg);
+      position: absolute;
+      right: -20px;
+      top: 33%;
+      z-index: 5;
+
+      @include respond-to(xxl) {
+          top: 0;
+      }
+    }
+
+
+    .h-line {
+      position: absolute;
+      top: 0;
+    }
+
+
+    .circle {
+      position: absolute;
+      top: 0;
+      right: 20%;
+
+      @include respond-to(xs) {
+        right: 0;
+        transform: translate(50%, 0);
+      }
+
+      .invisible {
+        display: none;
+      }
+
+      svg {
+        /*fill: 0;*/
+        stroke-width: 2px;
+      }
+    }
+  }
+}

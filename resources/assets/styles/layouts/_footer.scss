@@ -1,0 +1,163 @@
+.footer {
+  position: relative;
+
+  .h-line {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+
+  a {
+    &:after {
+      display: none;
+    }
+  }
+
+  &-inner {
+    padding: 80px 0;
+
+    @include respond-to(xl) {
+      max-width: 80%;
+    }
+  }
+
+  &-logo {
+    text-align: center;
+
+    a {
+      &:before {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 130px;
+    }
+
+    @include respond-to(xs) {
+      text-align: left;
+      padding: 0 15px 40px;
+    }
+  }
+
+  &-text {
+    font-weight: map-get($font-weight, "medium");
+    font-size: 12px;
+
+    text-align: justify;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: center;
+
+    .footer-nav {
+      @include respond-to(xl) {
+        width: 60%;
+      }
+
+
+      li {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 10px;
+
+        @include respond-to(xs) {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+
+        a {
+          font-weight: map-get($font-weight, "medium");
+          font-size: 12px;
+          text-transform: uppercase;
+
+          @include respond-to(xs) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    font-size: 12px;
+    margin-bottom: 20px;
+
+    @include respond-to(xs) {
+      font-size: 10px;
+    }
+  }
+
+  &-socials {
+    @include clear-list;
+    display: flex;
+    flex-wrap: wrap;
+
+    .social-item {
+      display: inline-flex;
+
+      &:not(:last-child){
+        margin-right: 10px;
+        //padding-right: 10px;
+
+        &:after {
+          content: '';
+          height: 100%;
+          display: inline-flex;
+          flex: 1;
+
+          width: 1px;
+          background-color: map-get($theme-colors, 'text');
+
+          margin-left: 10px;
+        }
+
+        @include respond-to(xs) {
+            &:after {
+                display: none;
+            }
+        }
+      }
+
+      a {
+        font-weight: map-get($font-weight, "medium");
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @include respond-to(xs) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .scroll-up {
+    @include respond-to(xl, 'max') {
+      display: none;
+    }
+
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(50%, -50%);
+
+    svg {
+      width: 14px;
+      height: 8px;
+      transform: rotateZ(90deg);
+    }
+  }
+}
+
+body {
+  &.template-contacts {
+    .footer {
+      background-color: #000000;
+
+      &-inner {
+        background-color: #ffffff;
+      }
+    }
+  }
+}

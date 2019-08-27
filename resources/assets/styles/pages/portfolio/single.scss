@@ -1,0 +1,422 @@
+.single-portfolio-page {
+
+  .section {
+    &-line {
+      margin-bottom: 30px;
+    }
+
+    &-top-line {
+      @include respond-to(xl) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 0;
+
+      @include respond-to(xl) {
+        font-size: 64px;
+      }
+    }
+  }
+
+  .block-subtitle {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    //margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include respond-to(xs) {
+      font-size: 14px;
+    }
+  }
+
+  .two-column-list {
+    list-style: none;
+    /* margin: 0; */
+    padding: 0;
+
+    li {
+      list-style-type: disc;
+      display: inline-block;
+
+      span {
+        display: list-item;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .full-width {
+    img {
+      width: 100%;
+      max-height: 750px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+
+  .parallax-image {
+    position: relative;
+    height: 514px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 900px;
+      object-fit: cover;
+      display: block;
+
+      position: absolute;
+      top: 10vh;
+    }
+
+    .bg-section {
+      width: 100%;
+      height: 900px;
+
+      position: absolute;
+      top: 10vh;
+    }
+  }
+
+  .project {
+    &-titles {
+      @include respond-to(xl) {
+        position: absolute;
+        z-index: 3;
+      }
+    }
+
+    &-thumbnail {
+      .image-wrapper {
+        @include respond-to(xl) {
+          position: relative;
+          right: -55px;
+        }
+      }
+    }
+
+    &-main-info {
+      @include respond-to(xl) {
+        padding-left: 55px;
+      }
+    }
+
+    &-type {
+      font-size: 16px;
+      text-transform: uppercase;
+
+      @include respond-to(xs) {
+        font-size: 12px;
+      }
+    }
+
+    &-slogan {
+      font-size: 16px;
+      display: inline-block;
+      max-width: 350px;
+
+
+      @include respond-to(xs) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .single-project {
+    &-hero {
+
+    }
+
+    &-concept {
+      .top-image {
+        @include respond-to(md) {
+          padding-left: 55px;
+        }
+
+        @include respond-to(xl) {
+          //position: relative;
+          //right: -20%;
+          //padding: 0;
+          //width: 80%;
+
+          position: relative;
+          right: -26.5%;
+          padding: 0;
+          width: 74%;
+        }
+
+        @include respond-to(xs) {
+          padding-left: 24px;
+        }
+      }
+
+      .left-image {
+        //position: absolute;
+        //left: 0;
+        //width: 20%;
+        //
+        //&-wrapper {
+        //  position: static;
+        //}
+
+        @include respond-to(xl) {
+          margin-left: -55px;
+        }
+      }
+
+      .text-block {
+        justify-content: flex-start;
+
+        .block-wrapper {
+          max-width: 300px;
+        }
+      }
+    }
+
+    &-experience {
+      .background-video {
+        position: relative;
+        margin-bottom: 60px;
+        //height: 750px;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            opacity: 0.5;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 254px;
+            height: 254px;
+            display: block;
+            background-image: url('~img/button-play.png');
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .back-video {
+          //position: absolute;
+          //top: 0;
+          //left: 0;
+          width: 100%;
+          //height: 100%;
+        }
+      }
+    }
+
+    &-gallery {
+      //.section-inner {
+      //  display: flex;
+      //  flex-direction: column;
+      //}
+
+
+      .gallery-row {
+        &.first {
+          .image-item {
+            &:nth-child(-n+3) {
+              margin-bottom: 0;
+
+              @include respond-to(md) {
+                margin-left: -55px;
+              }
+
+              @include respond-to(xl) {
+                margin-left: 0;
+                position: relative;
+                left: -55px;
+              }
+            }
+
+            &:nth-child(3) {
+              margin-bottom: 20px;
+            }
+
+          }
+        }
+
+        &.second {
+          position: relative;
+
+          .image-item {
+            margin-bottom: 20px;
+
+            img {
+              height: 500px;
+              display: block;
+              object-fit: cover;
+
+              @include respond-to(xs) {
+                height: 300px;
+              }
+            }
+
+            &:nth-child(even) {
+              .image-wrapper {
+                @include respond-to(xs) {
+                  margin-right: -24px;
+                }
+              }
+            }
+
+            &:first-child {
+              @include respond-to(xl) {
+                width: 20%;
+                position: absolute;
+                top: -520px;
+                right: -20%;
+              }
+
+              @include respond-to(tablet) {
+                display: inline-flex;
+                justify-content: flex-end;
+
+                .image-wrapper {
+                  width: 69%;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              @include respond-to(xl) {
+                .image-wrapper {
+                  position: relative;
+                  bottom: -220px;
+                }
+              }
+
+              @include respond-to(tablet) {
+                margin-right: -55px;
+              }
+            }
+
+            &:nth-child(3){
+              @include respond-to(tablet) {
+                margin-left: -55px;
+              }
+            }
+
+            &:nth-child(4){
+              @include respond-to(tablet) {
+                display: inline-flex;
+                justify-content: flex-start;
+
+                .image-wrapper {
+                  width: 69%;
+                }
+              }
+            }
+          }
+        }
+
+
+        //&:nth-child(4) {
+        //  @include respond-to(xl) {
+        //    width: 20%;
+        //    position: absolute;
+        //    top: -520px;
+        //    right: -20%;
+        //  }
+        //}
+      }
+    }
+
+    &-summarize {
+      .reverse {
+        @include respond-to(xl, 'max') {
+          flex-direction: column-reverse;
+        }
+
+        .image-wrapper {
+          @include respond-to(tablet) {
+            margin-right: -55px;
+          }
+        }
+      }
+    }
+
+    &-adjacent {
+      & > a {
+        display: block;
+        position: relative;
+        color: map-get($theme-colors, "text");
+        background-color: map-get($theme-colors, "putty");
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          border-radius: 100%;
+          display: block;
+
+          position: absolute;
+          bottom: -300px;
+          right: -300px;
+          z-index: 0;
+
+          height: 300px;
+          width: 300px;
+          opacity: 0;
+
+          transform: scale(0);
+          transition: all .45s ease-in;
+          background-color: map-get($theme-colors, "greyish");
+        }
+
+        &:hover {
+          color: #ffffff;
+
+          &:before {
+            opacity: 1;
+            transform: scale(15);
+          }
+
+          .divider {
+            background-color: #ffffff;
+          }
+        }
+      }
+
+      .adjacent-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .block-title {
+        margin-bottom: 30px;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+.blog-page {
+
+  .blog-hero {
+    .h-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .section-title {
+      margin-bottom: 10px;
+    }
+
+    .post {
+      &-taxonomies {
+          @include respond-to(md) {
+            padding-top: 25px;
+          }
+
+        &-list {
+          margin-bottom: 20px;
+        }
+
+        &-select {
+          .v-select {
+            margin-bottom: 30px;
+            //font-size: 14px;
+          }
+        }
+      }
+
+      &-list {
+
+      }
+
+      &-item {
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+
+        &:not(:last-child){
+          @include respond-to(xl) {
+            margin-bottom: 20px;
+          }
+
+          @include respond-to(xl, 'max') {
+            border-bottom: 0;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 40px 0;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-date {
+        text-transform: uppercase;
+        font-size: 14px;
+
+        @include respond-to(xs) {
+          font-size: 10px;
+        }
+      }
+
+      &-number {
+        font-size: 12px;
+
+        @include respond-to(xs) {
+          font-size: 10px;
+        }
+      }
+
+      &-title {
+        font-family: MonumentExtended;
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 800;
+
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        @include respond-to(xs) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+
+  .popular {
+    &-items {
+
+    }
+
+    &-item {
+
+      @include respond-to(xs) {
+        margin-bottom: 40px;
+      }
+
+      &:nth-child(3) {
+        @include respond-to(xl, 'max') {
+          display: none;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+
+        @include respond-to(xl, 'max') {
+          height: 430px;
+        }
+      }
+
+      .item-info {
+        .item-date {
+          font-size: 12px;
+          margin-top: 20px;
+        }
+
+        .item-title {
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .blog-subscribe {
+    .section-inner {
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 50px;
+
+      &-inner {
+        position: relative;
+        z-index: 3;
+
+        &:before {
+          content: '13';
+          font-size: 12px;
+          font-weight: 900;
+
+          position: absolute;
+          left: 0;
+          top: -20px;
+        }
+      }
+
+      @include respond-to(xl) {
+        display: inline-flex;
+        width: 70%;
+        padding: 0;
+      }
+
+      .form-title {
+        font-family: MonumentExtended;
+        font-size: 58px;
+        line-height: 1;
+        font-weight: 800;
+
+        margin-bottom: 60px;
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        @include respond-to(xs) {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .divider {
+        width: 100%;
+      }
+
+      //border: 2px solid #000000;
+      //border-radius: 50%;
+      //
+      //@include respond-to(xl) {
+      //  width: 70%;
+      //  height: 70%;
+      //  padding: 40px;
+      //}
+    }
+  }
+}
+
+.v-select {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include respond-to(xs) {
+      font-size: 9px;
+  }
+
+  .vs__dropdown-toggle {
+    border-color: transparent;
+
+    .vs__search {
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin padding {
+  padding-left: 62px;
+}
+
+.home {
+  .main {
+    a {
+      &:not(.block-link) {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .header {
+    background-color: map-get($theme-colors, "wanwhite");
+  }
+}
+
+//@import "./part/**/*.scss";
